@@ -18,7 +18,8 @@ def generate_lambda_routes(directory):
                 if '@LambdaFunction' in line:
                     filename = os.path.basename(file_path)
                     function_name = lines[lines.index(line) + 1].strip().split()[1].split('(')[0]
-                    lambda_routes.append({'filename': filename, 'function': function_name})
+
+                    lambda_routes.append({'filename': filename, 'function_name': function_name})
 
     def find_decorated_functions_in_directory(directory_path):
         for root, _, files in os.walk(directory_path):
