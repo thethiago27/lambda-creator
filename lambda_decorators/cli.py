@@ -12,7 +12,7 @@ def generate_lambda_routes(directory):
     lambda_routes = []
 
     def find_decorated_functions(file_path):
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()
             for line in lines:
                 if '@LambdaFunction' in line:
