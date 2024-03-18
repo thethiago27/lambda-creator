@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='meu_projeto',
-    version='0.1',
+    name='lambda_aws_creator',
+    version='0.2',
     packages=find_packages(),
     install_requires=[
         'click',
